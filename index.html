@@ -8,7 +8,6 @@
   body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to top, #0b0c2b, #1a1a40);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,11 +17,16 @@
     color: #fff;
     overflow: hidden;
     position: relative;
+
+    /* الخلفية صورة النجوم */
+    background: url('https://i.imgur.com/6QZ1XzF.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
 
   h1 {
     font-size: 2em;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 5px #000;
   }
 
   button {
@@ -62,6 +66,13 @@
     transition: bottom 1s ease-in-out;
   }
 
+  /* ضبط الهاتف */
+  @media only screen and (max-width: 600px) {
+    .raccoon { width: 80px; }
+    h1 { font-size: 1.5em; }
+    .message { width: 90%; font-size: 0.9em; }
+    button { padding: 8px 16px; font-size: 1em; }
+  }
 </style>
 </head>
 <body>
@@ -69,8 +80,10 @@
 <h1>Click here princess 🙃</h1>
 <button onclick="showRaccoon()">Click</button>
 
+<!-- الراكون مع باقة الورود -->
 <img src="https://i.imgur.com/8UoY0NR.png" class="raccoon" id="raccoon" alt="Raccoon with flowers">
 
+<!-- الرسالة -->
 <div class="message" id="message">
 Hey this is for you.<br><br>
 I knew you’re going through a lot even when you’re not telling me. I can feel it. I can feel your pain. I can feel when you’re angry or sad or happy. Even when you try to hide it, I know.<br><br>
